@@ -1,10 +1,6 @@
 {
   "version": 2,
   "buildCommand": "npm run build:ssr",
-  "builds": [
-    { "src": "dist/got-prerender-demo/browser/main.js", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "dist/got-prerender-demo/browser/main.js" }
-  ]
+  "outputDirectory": "dist/got-prerender-demo/browser",
+  "framework": "angular"
 }
