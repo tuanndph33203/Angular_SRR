@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build:ssr",
+  "builds": [
+    {
+      "src": "dist/got-prerender-demo/server/main.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/got-prerender-demo/browser/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/got-prerender-demo/server/main.js"
+    }
+  ]
+}
