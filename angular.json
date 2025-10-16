@@ -111,7 +111,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/got-prerender-demo/browser",
+            "outputPath": "dist/got-prerender-demo/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "externalDependencies": ["@firebase/firestore"]

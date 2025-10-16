@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "dev:ssr": "ng run got-prerender-demo:serve-ssr",
     "serve:ssr": "node dist/got-prerender-demo/browser/main.js",
-    "build:ssr": "ng build --configuration=production && ng run got-prerender-demo:server:production",
+    "build:ssr": "ng build --configuration=production && ng run got-prerender-demo:server:production && cp -r dist/got-prerender-demo/server/* dist/got-prerender-demo/browser/",
     "prerender": "ng run got-prerender-demo:prerender"
   },
   "private": true,
