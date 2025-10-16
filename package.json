@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-   "start": "node dist/got-prerender-demo/server/main.js",
+    "start": "node dist/got-prerender-demo/server/main.js",
     "build": "npm run build:ssr",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run got-prerender-demo:serve-ssr",
     "serve:ssr": "node dist/got-prerender-demo/server/main.js",
-    "build:ssr": "ng build --prod && ng run got-prerender-demo:server:production",
+    "build:ssr": "ng build --configuration=production && ng run got-prerender-demo:server:production",
     "prerender": "ng run got-prerender-demo:prerender"
   },
   "private": true,
