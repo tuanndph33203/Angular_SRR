@@ -1,16 +1,15 @@
 {
   "version": 2,
-  "installCommand": "npm install && npm run build:ssr",
   "builds": [
     {
-      "src": "dist/got-prerender-demo/browser/main.js",
+      "src": "dist/got-prerender-demo/server/main.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/got-prerender-demo/browser/main.js"
+      "dest": "dist/got-prerender-demo/server/main.js"
     }
   ]
 }
