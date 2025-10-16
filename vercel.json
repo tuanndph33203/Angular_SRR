@@ -1,6 +1,7 @@
 {
   "version": 2,
   "buildCommand": "npm run build:ssr",
+  "outputDirectory": "dist/got-prerender-demo/browser",
   "builds": [
     {
       "src": "dist/got-prerender-demo/server/main.js",
