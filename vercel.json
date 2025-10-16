@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "dist/got-prerender-demo/browser/main.js", "use": "@vercel/node" },
+    { "src": "dist/got-prerender-demo/browser/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "dist/got-prerender-demo/server/main.js" }
+  ]
+}
