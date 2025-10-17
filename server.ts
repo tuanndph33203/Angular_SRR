@@ -1,21 +1,21 @@
 import "zone.js/dist/zone-node";
 import { ngExpressEngine } from "@nguniversal/express-engine";
 import * as express from "express";
-import { join } from "path";
+import { dirname, join, resolve } from "path";
 import { existsSync } from "fs";
 import fetch from "node-fetch"; // ⚠️ cần: npm i node-fetch
 import { APP_BASE_HREF } from "@angular/common";
 import { AppServerModule } from "./src/main.server";
 import * as dotenv from "dotenv";
+import { fileURLToPath } from "url";
 dotenv.config();
 
 // ---------- ⚙️ TẠO APP EXPRESS ----------
 export function app(): express.Express {
   const server = express();
-  const distFolder = join(process.cwd(), "dist/got-prerender-demo/browser");
-  const indexHtml = existsSync(join(distFolder, "index.original.html"))
-    ? "index.original.html"
-    : "index";
+  const serverDistFolder = dirname(fileURLToPath(import.meta.url));
+  const distFolder = resolve(serverDistFolder, "../browser");
+  const indexHtml = join(serverDistFolder, "index.server.html");
 
   // SSR engine
   server.engine(
