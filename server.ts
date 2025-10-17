@@ -1,19 +1,17 @@
 import "zone.js/dist/zone-node";
 import { ngExpressEngine } from "@nguniversal/express-engine";
 import * as express from "express";
-import { dirname, join, resolve } from "path";
-import { existsSync } from "fs";
+import { join, resolve } from "path";
 import fetch from "node-fetch"; // ⚠️ cần: npm i node-fetch
 import { APP_BASE_HREF } from "@angular/common";
 import { AppServerModule } from "./src/main.server";
 import * as dotenv from "dotenv";
-import { fileURLToPath } from "url";
 dotenv.config();
 
 // ---------- ⚙️ TẠO APP EXPRESS ----------
 export function app(): express.Express {
   const server = express();
-  const serverDistFolder = dirname(fileURLToPath(import.meta.url));
+  const serverDistFolder = __dirname;
   const distFolder = resolve(serverDistFolder, "../browser");
   const indexHtml = join(serverDistFolder, "index.server.html");
 
