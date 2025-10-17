@@ -123,6 +123,7 @@ export function app(): express.Express {
           <meta property="og:description" content="${seo.description}">
           <meta property="og:image" content="${seo.image}">
           <meta property="og:url" content="${seo.url}">
+          <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary_large_image">
           </head>`
         );

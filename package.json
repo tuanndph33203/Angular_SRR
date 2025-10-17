@@ -28,7 +28,7 @@
     "@nguniversal/express-engine": "^10.1.0",
     "express": "^4.15.2",
     "firebase": "^7.13.1",
-    "node-fetch": "^3.3.2",
+    "node-fetch": "^2.7.0",
     "rxjs": "~6.6.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
